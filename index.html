@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Ahtelleeay</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#111111">
-<link rel="stylesheet" href="style-v47.css?v=47">
+<link rel="stylesheet" href="style-v48_1.css?v=48.1">
 </head>
-<body>
+<body data-section="schedule">
 <div class="app">
 <header>
-  <div class="brandLockup"><div class="brandMark">A</div><div><h1>AHTELLEEAY</h1><p id="subtitle"></p><p class="buildBadge">BUILD V47 • Creative Workflow Studio</p></div></div>
+  <div class="brandLockup"><div class="brandMark">A</div><div><h1>AHTELLEEAY</h1><p id="subtitle"></p><p class="buildBadge">BUILD V48.1 • Creative Workflow Studio</p></div></div>
   <div class="headerActions"><span id="pwaStatus" class="pwaStatus">Checking offline mode…</span><button onclick="backup()">Backup</button><button onclick="forceFreshApp()">Refresh App</button></div>
 </header>
 <div class="binder">
@@ -19,7 +19,7 @@
     <div id="subtabs" class="subtabs"></div>
     <section id="content" class="paper"></section>
   </main>
-  <nav class="sideTabs">
+  <nav class="sideTabs" aria-label="Main sections">
     <button class="sideTab active" data-section="schedule" onclick="setSection('schedule')">Schedule</button>
     <button class="sideTab" data-section="clients" onclick="setSection('clients')">Clients</button>
     <button class="sideTab" data-section="supplies" onclick="setSection('supplies')">Supplies</button>
@@ -28,7 +28,6 @@
   </nav>
 </div>
 </div>
-<script src="app-v47.js?v=47"></script>
-
+<script src="app-v48_1.js?v=48.1"></script>
 </body>
 </html>
