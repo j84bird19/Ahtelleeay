@@ -1,11 +1,11 @@
-const CACHE='ahtelleeay-v48-2-math-sync-lock';
+const CACHE='ahtelleeay-v48-1-tab-frame-fix-rebuild';
 const ASSETS=[
   './',
-  './index.html?v=48.2',
+  './index.html?v=48.1',
   './index.html',
   './manifest.json',
-  './style-v48_2.css?v=48.2',
-  './app-v48_2.js?v=48.2',
+  './style-v48_1.css?v=48.1',
+  './app-v48_1.js?v=48.1',
   './icon-192.png',
   './icon-512.png'
 ];
@@ -24,7 +24,7 @@ self.addEventListener('fetch',event=>{
       const copy=res.clone();
       caches.open(CACHE).then(cache=>cache.put('./index.html',copy));
       return res;
-    }).catch(()=>caches.match('./index.html?v=48.2').then(r=>r||caches.match('./index.html'))));
+    }).catch(()=>caches.match('./index.html?v=48.1').then(r=>r||caches.match('./index.html'))));
     return;
   }
   if(url.origin===location.origin){

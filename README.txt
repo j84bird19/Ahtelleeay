@@ -1,23 +1,24 @@
-Ahtelleeay V48.2 Math + Sync Lock Pass
+Ahtelleeay V48 Foundation Rebuild
 
-Built from the confirmed-working V48.1 fixed binder/navigation frame.
+Purpose:
+- Clean rebuild from the stable V47 baseline.
+- Replaces the stacked V16/V17/V18 visual tab engines with ONE clean binder/folder engine.
+- Keeps all existing app logic intact.
 
-Locked and preserved:
-- Fixed binder/navigation frame
-- All 5 side tabs fit and stay fixed
-- Folder color engine
-- Existing section architecture
-- Offline-first PWA shell
-
-V48.2 fixes only math/sync/save behavior:
-- Central math normalization before save/flush
-- Cost Per Unit recalculates from Cost ÷ Amount in real time
-- Supply item page autosaves typed fields
-- Quantity Remaining can be physically corrected with inventory correction log
-- Invoice supply lines recalc from quantity × cost per unit
-- Invoice totals, paid, balance, and status normalize before save
-- Supply remaining resyncs after invoice edits/removals
-- Quick Add supply path cleaned so duplicate supplies open correctly
+Updates:
+- Fixed binder/navigation frame so header, option tabs, and vertical section tabs remain fixed while page content scrolls.
+- Rebuilt vertical section tabs as 5 equal full-height overlapping physical folder tabs.
+- Rebuilt top option tabs with luxury gold/section-colored folder styling.
+- Active section colors the folder frame/background.
+- Cleaned mobile layout to prevent visual-engine conflict and white-screen risk.
+- Updated cache/service worker/build references to V48.
 
 Deployment rule:
-Upload extracted files into the active dev branch as a complete replacement build.
+Upload ONLY these extracted files into the repo root. Do not mix with older files.
+
+
+V48.1 Fixes:
+- All 5 vertical section tabs fit the side rail using one stable equal-row grid.
+- Frame/page remain fixed while only the paper content scrolls.
+- Active section folder/frame colors are visibly applied.
+- No app logic changed.
