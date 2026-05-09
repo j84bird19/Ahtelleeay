@@ -15,3 +15,10 @@ Updates:
 
 Deployment rule:
 Upload ONLY these extracted files into the repo root. Do not mix with older files.
+
+
+V48.1 Fixes:
+- All 5 vertical section tabs fit the side rail using one stable equal-row grid.
+- Frame/page remain fixed while only the paper content scrolls.
+- Active section folder/frame colors are visibly applied.
+- No app logic changed.
