@@ -1,9 +1,9 @@
-Ahtelleeay V48.3 Math + Sync Stabilization
+Ahtelleeay V48.4 Invoice Supply Charge Fix
 
 Baseline:
-- Built from confirmed working V48.1 visual/folder-frame baseline.
-- Binder/frame/tab CSS was not redesigned or replaced.
-- This pass is intended to patch math/sync behavior only.
+- Built from confirmed working V48.3 branch structure.
+- Binder/frame/tab visuals remain locked and untouched.
+- This patch only fixes invoice supply charge calculation.
 
 Locked / untouched:
 - Fixed binder/navigation frame
@@ -13,14 +13,10 @@ Locked / untouched:
 - Studio visuals
 
 Updates:
-- Cost Per Unit recalculates from Cost ÷ Amount of Item for That Cost.
-- Supply item fields autosave while typing.
-- Quantity Remaining can be corrected using a physical count.
-- Manual remaining corrections are logged as inventory adjustments.
-- Invoice supply lines normalize quantity × cost per unit when a saved supply has a unit cost.
-- Invoice total, paid, balance, and status normalize before save and flush.
-- Supply remaining reconciles after invoice add/edit/remove/autosave.
-- Quick Add duplicate-supply path cleaned so it opens the existing item instead of injecting boot code.
+- Invoice supplies now calculate charge from saved Cost Per Unit × Amount Used.
+- Invoice supply lines can pull Cost Per Unit even if it was not cached yet but Cost and Amount For That Cost exist.
+- Named supply items are promoted out of draft status so invoice lookup can find them.
+- Duplicate quick-add / invoice-added supplies resolve to the existing saved supply instead of creating a $0 duplicate.
 
 Deployment rule:
 Upload ONLY these extracted files into the repo root of the active dev branch. Do not mix with older files.
