@@ -1,11 +1,17 @@
-Ahtelleeay V47 Brand Identity Pass
+Ahtelleeay V48 Foundation Rebuild
+
+Purpose:
+- Clean rebuild from the stable V47 baseline.
+- Replaces the stacked V16/V17/V18 visual tab engines with ONE clean binder/folder engine.
+- Keeps all existing app logic intact.
 
 Updates:
-- Rebranded visible app shell from Bird Planner to Ahtelleeay.
-- Added premium cream/gold/charcoal visual language inspired by the branding board.
-- Refined header, brand mark, buttons, folder tabs, cards, calendar, trackers, forms, scratch pad, time card, and reminder styling.
-- Updated manifest/app title/PWA name/icons/service worker cache to V47.
-- Business logic, save/sync, offline database, supply/invoice math, time card, reminders, and Studio architecture are preserved.
+- Fixed binder/navigation frame so header, option tabs, and vertical section tabs remain fixed while page content scrolls.
+- Rebuilt vertical section tabs as 5 equal full-height overlapping physical folder tabs.
+- Rebuilt top option tabs with luxury gold/section-colored folder styling.
+- Active section colors the folder frame/background.
+- Cleaned mobile layout to prevent visual-engine conflict and white-screen risk.
+- Updated cache/service worker/build references to V48.
 
 Deployment rule:
-Delete old app files in the stabilization branch, then upload ONLY these extracted V47 files into the repo root.
+Upload ONLY these extracted files into the repo root. Do not mix with older files.

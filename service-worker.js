@@ -1,19 +1,19 @@
-const CACHE='ahtelleeay-v47-brand-identity';
+const CACHE='ahtelleeay-v48-foundation-rebuild';
 const ASSETS=[
   './',
-  './index.html?v=47',
+  './index.html?v=48',
   './index.html',
   './manifest.json',
-  './style-v47.css?v=47',
-  './app-v47.js?v=47',
+  './style-v48.css?v=48',
+  './app-v48.js?v=48',
   './icon-192.png',
   './icon-512.png'
 ];
 self.addEventListener('install',event=>{
-  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))
+  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));
 });
 self.addEventListener('activate',event=>{
-  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))
+  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));
 });
 self.addEventListener('fetch',event=>{
   const req=event.request;
@@ -21,11 +21,17 @@ self.addEventListener('fetch',event=>{
   const url=new URL(req.url);
   if(req.mode==='navigate'){
     event.respondWith(fetch(req).then(res=>{
-      const copy=res.clone();caches.open(CACHE).then(cache=>cache.put('./index.html',copy));return res;
-    }).catch(()=>caches.match('./index.html?v=47').then(r=>r||caches.match('./index.html'))));
+      const copy=res.clone();
+      caches.open(CACHE).then(cache=>cache.put('./index.html',copy));
+      return res;
+    }).catch(()=>caches.match('./index.html?v=48').then(r=>r||caches.match('./index.html'))));
     return;
   }
   if(url.origin===location.origin){
-    event.respondWith(caches.match(req).then(cached=>cached||fetch(req).then(res=>{const copy=res.clone();caches.open(CACHE).then(cache=>cache.put(req,copy));return res}).catch(()=>cached)));
+    event.respondWith(caches.match(req).then(cached=>cached||fetch(req).then(res=>{
+      const copy=res.clone();
+      caches.open(CACHE).then(cache=>cache.put(req,copy));
+      return res;
+    }).catch(()=>cached)));
   }
 });
