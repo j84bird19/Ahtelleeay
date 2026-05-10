@@ -27,3 +27,10 @@ Example:
 
 Deployment rule:
 Upload ONLY these extracted files into the repo root of the active dev branch. Do not mix with older files.
+
+
+V48.6 Save / Autosave Hardening:
+- Adds live draft autosave for job, event, client, invoice, supply, and timecard input fields.
+- Flushes visible page fields before page hide/app close.
+- Persists invoice pending service/supply inputs as drafts until explicitly added or committed on navigation.
+- Preserves locked binder visuals and locked financial precision engine.
