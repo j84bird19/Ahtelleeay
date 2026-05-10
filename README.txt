@@ -1,22 +1,15 @@
-Ahtelleeay V48.7 Studio / Sketch Pad Design Pass
+Ahtelleeay V48.8 Studio Engine Fix
 
-Purpose:
-- Upgrade Studio and Sketch Pad visuals/workflow while preserving locked systems.
+Baseline:
+- Built from V48.7 Studio polish build.
+- Binder/frame, tabs, autosave, supply/invoice math, financial precision, and offline structure are untouched.
 
-Locked/untouched:
-- Binder/frame visuals
-- Section tabs/colors
-- Financial precision engine
-- Supply/invoice sync
-- Save/autosave hardening
-- Offline/PWA structure
-
-Updates:
-- Reworked Studio into a premium creative workspace.
-- Polished sketchbook header, tool shelf, canvas frame, inspector, and gallery cards.
-- Added opacity control to Style tools.
-- Color, size, opacity, draw/eraser, shape, image, undo, save, clear, and native share remain available.
-- File upload and camera image input remain separate options.
+Fixes:
+- Pencil/eraser strokes now render as continuous smooth strokes instead of broken dashed segments.
+- Studio color changes apply immediately to new drawing strokes.
+- Replaced Android native color dialog with an in-app palette + hex color field.
+- Opacity and size controls remain in the Style menu.
+- File and camera image import remain available.
 
 Deployment rule:
-Delete old branch files, then upload ONLY these extracted V48.7 files into the repo root.
+Upload ONLY these extracted files into the repo root of the active dev branch. Do not mix with older files.
