@@ -1,24 +1,15 @@
-Ahtelleeay V48 Foundation Rebuild
+Ahtelleeay V48.9 Banking V1
 
-Purpose:
-- Clean rebuild from the stable V47 baseline.
-- Replaces the stacked V16/V17/V18 visual tab engines with ONE clean binder/folder engine.
-- Keeps all existing app logic intact.
+Baseline:
+- Built from locked V48.6 save/autosave baseline.
+- Binder/frame visuals, financial precision, supply/invoice sync, and autosave remain protected.
 
-Updates:
-- Fixed binder/navigation frame so header, option tabs, and vertical section tabs remain fixed while page content scrolls.
-- Rebuilt vertical section tabs as 5 equal full-height overlapping physical folder tabs.
-- Rebuilt top option tabs with luxury gold/section-colored folder styling.
-- Active section colors the folder frame/background.
-- Cleaned mobile layout to prevent visual-engine conflict and white-screen risk.
-- Updated cache/service worker/build references to V48.
+Adds Banking V1:
+- Accounts tab with money received, money spent, and move-to-savings entries.
+- Live account trackers: Received, Spent, Saved, Spending Balance.
+- Trackers tab with spending by category and invoice-paid reference total.
+- Receipts tab with expense/receipt list and photo attachments.
+- Banking entries autosave and persist offline with the existing local database system.
 
 Deployment rule:
-Upload ONLY these extracted files into the repo root. Do not mix with older files.
-
-
-V48.1 Fixes:
-- All 5 vertical section tabs fit the side rail using one stable equal-row grid.
-- Frame/page remain fixed while only the paper content scrolls.
-- Active section folder/frame colors are visibly applied.
-- No app logic changed.
+Upload ONLY these extracted files into the repo root of the active dev branch. Do not mix with older files.
