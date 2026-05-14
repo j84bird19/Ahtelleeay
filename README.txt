@@ -1,15 +1,24 @@
-Ahtelleeay V48.9 Banking V1
+Ahtelleeay V49.1 Banking Account Register
 
 Baseline:
-- Built from locked V48.6 save/autosave baseline.
-- Binder/frame visuals, financial precision, supply/invoice sync, and autosave remain protected.
+- Built from V48.9 Banking V1 branch build.
+- Binder/frame/navigation visuals remain untouched.
+- Banking input workflow remains the same.
 
-Adds Banking V1:
-- Accounts tab with money received, money spent, and move-to-savings entries.
-- Live account trackers: Received, Spent, Saved, Spending Balance.
-- Trackers tab with spending by category and invoice-paid reference total.
-- Receipts tab with expense/receipt list and photo attachments.
-- Banking entries autosave and persist offline with the existing local database system.
+Locked / untouched:
+- Fixed binder/navigation frame
+- Five vertical section tabs
+- Section color engine
+- Financial precision engine
+- Supply/invoice sync
+- Autosave foundation
+- Studio direction
+
+Update:
+- Accounts page Recent Banking Activity changed from individual transaction cards to a checkbook-style account register.
+- Tracker page All Transactions remains unchanged.
+- Register includes date, transaction, method, debit, credit, running spending balance, and action buttons.
+- Same Add Money Entry input method and banking data model retained.
 
 Deployment rule:
-Upload ONLY these extracted files into the repo root of the active dev branch. Do not mix with older files.
+Upload ONLY these extracted files into the repo root of the active Banking branch. Do not mix with older files.
