@@ -1,19 +1,25 @@
-Ahtelleeay V49.3 Receipt Thumbnail + Scanner Crop
+Ahtelleeay V49.4 Banking Invoice + Supply Sync
 
-Baseline:
-- Built from confirmed working V49.2 Banking Receipt Save Fix.
-- Banking V1 remains locked.
-- Binder/frame, tabs, colors, math, sync, autosave, and offline shell are untouched.
+Built from the locked V49 banking system.
 
 Updates:
-- Receipt thumbnails in Banking Receipts are constrained to a fixed small size so entry boxes do not resize.
-- Tapping/opening a receipt entry shows the larger receipt image in the edit view.
-- Tapping the full receipt image opens a larger viewer overlay.
-- Receipt image upload now runs a lightweight scanner-style auto-crop pass to trim document/receipt edges when detectable.
-- Image compression remains enabled to prevent large camera photos from freezing the app.
+- Banking Accounts Money Received now includes a Link Unpaid Invoice dropdown.
+- Selecting an unpaid/partial invoice autofills payment description and balance amount.
+- Saving a linked banking income entry updates that invoice's paid amount/status.
+- Mark Paid on an invoice creates a linked income entry in the checkbook register and prevents detached money tracking.
+- Editing/deleting linked banking entries safely recalculates the linked invoice payment status.
+- Banking Money Spent now includes a Supply Item dropdown populated from saved supplies.
+- Selecting a supply autofills a supply purchase description/category and uses saved supply cost when available.
 
-Note:
-- Auto-crop is a browser-safe beta heuristic. It works best when the receipt/card/document has visible contrast from the surface behind it.
+Locked / untouched:
+- Banking register visuals and receipt thumbnail behavior.
+- Binder/navigation/frame visuals.
+- Financial precision engine.
+- Supply quantity/invoice usage sync.
+- Autosave/offline/PWA structure.
+
+Not locked:
+- Receipt scanner auto-crop remains experimental.
 
 Deployment rule:
-Upload ONLY these extracted files into the repo root of the active banking branch. Do not mix with older files.
+Delete existing files in the branch and upload ONLY these extracted files into the repo root.
