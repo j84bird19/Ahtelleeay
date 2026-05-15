@@ -1,26 +1,28 @@
-Ahtelleeay V49.11 Backup + Recovery Lock Pass
+Ahtelleeay V49.12 Human-Readable Backup Reports
 
-Updates:
-- Added Backup / Recovery Center to Banking > Trackers.
-- Full portable database export as JSON.
-- Full database import/restore for new phone, app reinstall, or app update recovery.
-- Admin record receipt log for important saved entries.
-- Optional backup email setting.
-- Optional auto-open email receipt after major saves.
-- Email unsent record receipts button.
-- Download admin receipt log button.
+Baseline:
+- Built from the locked V49.11 Backup + Recovery system.
+- JSON full backup/import remains the true restore engine.
 
-Important note:
-A browser/PWA cannot silently send email without a secure backend service. This build safely opens the device email/share app with a prefilled backup receipt so the user can send it. Full automatic background emailing will require a backend/email provider later.
+Added:
+- Human-Readable Reports panel in Banking > Trackers.
+- Business Records Report: balances, banking ledger, savings goals, invoices, spending categories.
+- Client Report: client records, totals, invoices, payments.
+- Schedule Snapshot: agenda/jobs/tasks and time logs.
+- Reports open as styled printable/shareable HTML pages. User can print/save as PDF from the browser.
+- Report exports are logged in the admin receipt log.
 
 Locked / untouched:
 - Binder/navigation visuals.
-- Banking/invoice sync logic.
+- Invoice <-> banking sync.
+- Savings goals sync.
 - Financial precision.
-- Savings goals math.
 - Receipt/register UI.
 - Supply sync.
-- Schedule/Studio baseline.
+- Full JSON backup/import recovery.
+
+Important:
+- Do not replace the JSON backup with visual reports. JSON is for restore. Reports are for human-readable records.
 
 Deployment rule:
-Upload ONLY these extracted files into the branch root. Do not mix with older files.
+Delete existing files in the active branch and upload ONLY these extracted files into the repo root. Do not mix with older files.
