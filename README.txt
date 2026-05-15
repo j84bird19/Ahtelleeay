@@ -1,6 +1,6 @@
-Ahtelleeay V49.5 Banking Categories + Schedule Day Forms
+Ahtelleeay V49.6 Invoice Payment Controls + Location Pin
 
-Built from the locked V49.4 banking invoice/supply sync system.
+Built from the locked V49.5 banking/schedule build.
 
 Locked / untouched:
 - Binder/navigation/frame visuals.
@@ -8,18 +8,16 @@ Locked / untouched:
 - Financial precision.
 - Invoice/supply quantity usage sync.
 - Autosave/offline/PWA structure.
+- Banking invoice/supply sync architecture.
 
 Updates:
-- Banking category dropdown now supports user custom categories.
-- Add Category button adds user-created categories to the banking category list.
-- Remove Selected button removes custom categories while preserving existing transaction history.
-- Custom categories appear in money received, money spent, savings/transfer entries, edited bank entries, and tracker totals.
-- Calendar day tap opens a Day Planner panel.
-- Day Planner can add Job or Event with the selected calendar date prefilled.
-- Existing calendar jobs/events can be opened back into their entry forms for editing.
-
-Note:
-- Editing an existing job updates the schedule/client record details. It does not create a duplicate invoice payment/service line.
+- Invoice Amount Paid fields are now editable without the page fighting/re-rendering while typing.
+- Invoice Status is now a dropdown: UNPAID, PARTIAL, PAID.
+- Setting status to PAID creates/updates the linked Banking income entry and keeps invoice/banking totals synced.
+- Setting status to UNPAID removes auto-created invoice payment entries and recalculates invoice paid/status safely.
+- Full invoice view and embedded client invoice view both use the same payment/status sync behavior.
+- Job form address area now includes Pin Current Location and Open Map buttons for job sites without clear addresses.
+- Pinned GPS coordinates are saved with the job draft/job record and can open in Google Maps.
 
 Deployment rule:
 Delete existing files in the active dev branch and upload ONLY these extracted files into the repo root.
