@@ -1,25 +1,25 @@
-Ahtelleeay V49.4 Banking Invoice + Supply Sync
+Ahtelleeay V49.5 Banking Categories + Schedule Day Forms
 
-Built from the locked V49 banking system.
-
-Updates:
-- Banking Accounts Money Received now includes a Link Unpaid Invoice dropdown.
-- Selecting an unpaid/partial invoice autofills payment description and balance amount.
-- Saving a linked banking income entry updates that invoice's paid amount/status.
-- Mark Paid on an invoice creates a linked income entry in the checkbook register and prevents detached money tracking.
-- Editing/deleting linked banking entries safely recalculates the linked invoice payment status.
-- Banking Money Spent now includes a Supply Item dropdown populated from saved supplies.
-- Selecting a supply autofills a supply purchase description/category and uses saved supply cost when available.
+Built from the locked V49.4 banking invoice/supply sync system.
 
 Locked / untouched:
-- Banking register visuals and receipt thumbnail behavior.
 - Binder/navigation/frame visuals.
-- Financial precision engine.
-- Supply quantity/invoice usage sync.
+- Banking register and receipt thumbnail behavior.
+- Financial precision.
+- Invoice/supply quantity usage sync.
 - Autosave/offline/PWA structure.
 
-Not locked:
-- Receipt scanner auto-crop remains experimental.
+Updates:
+- Banking category dropdown now supports user custom categories.
+- Add Category button adds user-created categories to the banking category list.
+- Remove Selected button removes custom categories while preserving existing transaction history.
+- Custom categories appear in money received, money spent, savings/transfer entries, edited bank entries, and tracker totals.
+- Calendar day tap opens a Day Planner panel.
+- Day Planner can add Job or Event with the selected calendar date prefilled.
+- Existing calendar jobs/events can be opened back into their entry forms for editing.
+
+Note:
+- Editing an existing job updates the schedule/client record details. It does not create a duplicate invoice payment/service line.
 
 Deployment rule:
-Delete existing files in the branch and upload ONLY these extracted files into the repo root.
+Delete existing files in the active dev branch and upload ONLY these extracted files into the repo root.
