@@ -21,3 +21,10 @@ Updates:
 
 Deployment rule:
 Delete existing files in the active dev branch and upload ONLY these extracted files into the repo root.
+
+
+V49.7 Savings Goals:
+- Adds savings goals to Banking Trackers with Total Needed, Amount Saved Toward, Priority, remaining amount, and progress bars.
+- Goal allocations sync with actual savings balance so allocated savings does not create fake money.
+- Unallocated savings tracker updates from banking transfer entries.
+- Binder, invoice, supply, and banking register locked systems preserved.
