@@ -1,0 +1,8 @@
+{
+  "name": "Bird Planner V27 Schedule Day View",
+  "short_name": "Planner",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505"
+}
